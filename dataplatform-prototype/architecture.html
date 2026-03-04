@@ -5,159 +5,379 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>数据中台 · 产品功能架构图</title>
 <style>
-*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;background:#f2f4f8;color:#111}
-.page{padding:18px;display:flex;flex-direction:column;gap:14px}
-.head{display:flex;align-items:center;justify-content:space-between}
-.title{font-size:20px;font-weight:800}
-.sub{color:#667085;font-size:12px;margin-top:4px}
-.actions{display:flex;gap:10px;flex-wrap:wrap}
-.btn{appearance:none;border:1px solid #d0d5dd;background:#fff;color:#111;padding:10px 12px;border-radius:10px;cursor:pointer;font-weight:650}
-.btn--primary{background:#2e8def;border-color:#2e8def;color:#fff}
-.diagram{border:1px solid #e4e7ec;background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(16,24,40,.06);padding:14px}
-.row{display:flex;gap:12px;flex-wrap:wrap}
-.col{display:flex;flex-direction:column;gap:12px;min-width:260px;flex:1}
-.card{border:1px solid #e4e7ec;background:#fafafa;border-radius:10px;overflow:hidden}
-.card__h{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:#f5f7fb;border-bottom:1px solid #e4e7ec}
-.card__t{font-weight:750}
-.card__b{padding:10px 12px;display:flex;flex-wrap:wrap;gap:8px}
-.item{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid #e4e7ec;border-radius:9px;background:#fff;font-size:12px}
-.link{color:#2e8def;text-decoration:none;border-bottom:1px dashed rgba(46,141,239,.35)}
-.tag{display:inline-flex;align-items:center;padding:3px 8px;border:1px solid #e4e7ec;border-radius:999px;background:#f9fafb;font-size:12px;color:#667085}
-.lane{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.lane .chip{padding:7px 10px;border:1px solid #d0d5dd;border-radius:999px;background:#fff;font-weight:700}
-.divider{height:1px;background:#e4e7ec;margin:6px 0}
-.foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.note{font-size:12px;color:#667085}
-@media (max-width: 980px){.col{min-width: min(100%, 360px)}}
+/* Reset & Base */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Links */
+a { text-decoration: none; color: inherit; display: block; width: 100%; height: 100%; }
+
+/* Main Container */
+.arch-container {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px; /* Left Sidebar, Center, Right Sidebar */
+  gap: 10px;
+  max-width: 1400px;
+  width: 100%;
+  background: #fff;
+}
+
+/* Sidebars (Vertical Text) */
+.sidebar {
+  background-color: #9ecaf1; /* Light Blue */
+  border: 1px solid #5b9bd5;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-lr;
+  letter-spacing: 8px;
+  padding: 20px 0;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Center Content Area */
+.center-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Top Rows (Value & Apps) */
+.top-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+.row-label {
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.row-content {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+}
+.white-box {
+  flex: 1;
+  border: 2px solid #5b9bd5;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Main Governance Area (Blue Container) */
+.blue-container {
+  background-color: #cfe2f3;
+  border: 1px solid #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Split Area: Flow & Modules */
+.split-area {
+  display: flex;
+  gap: 15px;
+}
+.split-left {
+  flex: 2;
+  background: #9abfe2; /* Slightly darker blue */
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 200px;
+}
+.split-right {
+  flex: 3;
+  background: #9abfe2;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cols */
+  gap: 10px;
+  align-content: center;
+}
+
+/* Dark Modules */
+.dark-module {
+  background-color: #405060; /* Dark Grey/Blue */
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.1s;
+  min-height: 36px;
+}
+.dark-module:hover {
+  transform: translateY(-2px);
+  background-color: #2e8def;
+}
+
+/* Circular Flow Animation (Simplified) */
+.flow-circle {
+  position: relative;
+  width: 200px;
+  height: 150px;
+}
+.flow-node {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border: 2px solid #2e8def;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2e8def;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+/* Positioning nodes in a rough oval */
+.n1 { top: 50%; left: 0; transform: translateY(-50%); } /* Left */
+.n2 { top: 0; left: 50%; transform: translateX(-50%); } /* Top */
+.n3 { top: 50%; right: 0; transform: translateY(-50%); } /* Right */
+.n4 { bottom: 0; left: 50%; transform: translateX(-50%); } /* Bottom */
+/* Arrows (CSS borders) */
+.flow-arrow {
+  position: absolute;
+  border: 2px dashed #405060;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* System Management Grid */
+.sys-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+/* Some items span 2 rows in the image */
+.span-v { grid-row: span 2; height: 100%; }
+
+/* Bottom Rows (Integration & Distribution) */
+.bottom-bar {
+  display: flex;
+  align-items: stretch;
+  background-color: #cfe2f3; /* Same as container bg */
+  padding: 10px;
+}
+.bar-label {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: #333;
+}
+.bar-content {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+}
+.wide-dark-btn {
+  flex: 1;
+  background-color: #405060;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.wide-dark-btn:hover { opacity: 0.9; }
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .arch-container { grid-template-columns: 40px 1fr 40px; }
+  .split-area { flex-direction: column; }
+  .sys-grid { grid-template-columns: repeat(3, 1fr); }
+  .top-row { flex-wrap: wrap; }
+  .row-label { width: 100%; margin-bottom: 5px; }
+}
 </style>
 </head>
 <body>
-<div class="page">
-  <div class="head">
-    <div>
-      <div class="title">数据中台 · 产品功能架构图</div>
-      <div class="sub">覆盖集成→开发→治理→服务→安全→运维，结合数仓分层与资产治理闭环</div>
+
+<div class="arch-container">
+  <!-- Left Sidebar -->
+  <div class="sidebar">数据全生命周期</div>
+
+  <!-- Center Content -->
+  <div class="center-area">
+    
+    <!-- Row 1: Value -->
+    <div class="top-row">
+      <div class="row-label">价值体现</div>
+      <div class="row-content">
+        <div class="white-box">实现数据共享</div>
+        <div class="white-box">提升数据质量</div>
+        <div class="white-box">缩减运维成本</div>
+        <div class="white-box">降低数据风险</div>
+        <div class="white-box">改善决策支撑</div>
+      </div>
     </div>
-    <div class="actions">
-      <a class="btn" href="./index.html#//spaces">进入演示：分层</a>
-      <a class="btn" href="./index.html#//metadata">进入演示：元数据</a>
-      <a class="btn" href="./index.html#//plaza">进入演示：资产广场</a>
-      <a class="btn" href="./index.html#//standards">进入演示：标准评审</a>
+
+    <!-- Row 2: Apps -->
+    <div class="top-row">
+      <div class="row-label">应用系统</div>
+      <div class="row-content">
+        <div class="white-box">资产广场</div>
+        <div class="white-box">数据报表</div>
+        <div class="white-box">API服务</div>
+        <div class="white-box">画像分析</div>
+        <div class="white-box">决策大屏</div>
+      </div>
     </div>
+
+    <!-- Center Block 1: Governance & Modules -->
+    <div class="blue-container">
+      <div class="section-title">数据治理与开发中心</div>
+      <div class="split-area">
+        <!-- Left: Flow -->
+        <div class="split-left">
+           <div style="position:absolute; top:10px; left:10px; font-weight:700; color:#fff;">开发治理流程</div>
+           <div class="flow-circle">
+             <!-- Nodes -->
+             <div class="flow-node n1">采集</div>
+             <div class="flow-node n2">开发</div>
+             <div class="flow-node n3">质量</div>
+             <div class="flow-node n4">服务</div>
+             <!-- Connecting Lines (Visual only) -->
+             <svg width="200" height="150" style="position:absolute; top:0; left:0; transform: rotate(0deg);">
+               <path d="M 20 75 Q 20 20 100 20" fill="none" stroke="#405060" stroke-width="2" marker-end="url(#arrow)" />
+               <path d="M 100 20 Q 180 20 180 75" fill="none" stroke="#405060" stroke-width="2" marker-end="url(#arrow)" />
+               <path d="M 180 75 Q 180 130 100 130" fill="none" stroke="#405060" stroke-width="2" marker-end="url(#arrow)" />
+               <path d="M 100 130 Q 20 130 20 75" fill="none" stroke="#405060" stroke-width="2" marker-end="url(#arrow)" />
+               <defs>
+                 <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                   <path d="M0,0 L0,6 L9,3 z" fill="#405060" />
+                 </marker>
+               </defs>
+             </svg>
+           </div>
+           
+           <!-- Side buttons in flow area -->
+           <div style="position:absolute; right:10px; top:20px; display:flex; flex-direction:column; gap:8px;">
+             <a class="dark-module" style="width:100px; background:#2c3e50;" href="../数据中台HTML代码/转换任务管理.html">转换任务</a>
+             <a class="dark-module" style="width:100px; background:#2c3e50;" href="../数据中台HTML代码/作业管理.html">作业调度</a>
+           </div>
+        </div>
+
+        <!-- Right: Modules Grid -->
+        <div class="split-right">
+           <!-- Column 1: Metadata -->
+           <div style="grid-column: span 4; text-align:center; color:#fff; font-weight:700; margin-bottom:5px;">核心功能模块</div>
+           
+           <a class="dark-module" href="../数据中台HTML代码/数据源管理.html">数据源</a>
+           <a class="dark-module" href="./index.html#//metadata">元数据</a>
+           <a class="dark-module" href="./index.html#//metadata">数据血缘</a>
+           <a class="dark-module" href="../数据中台HTML代码/元数据检索.html">检索</a>
+
+           <a class="dark-module" href="../数据中台HTML代码/标准集管理.html">标准集</a>
+           <a class="dark-module" href="../数据中台HTML代码/数据标准管理.html">数据标准</a>
+           <a class="dark-module" href="../数据中台HTML代码/标准码值管理.html">码值管理</a>
+           <a class="dark-module" href="../数据中台HTML代码/数据质量规则库.html">质量规则</a>
+
+           <a class="dark-module" href="../数据中台HTML代码/离线开发.html">离线开发</a>
+           <a class="dark-module" href="../数据中台HTML代码/实时开发.html">实时开发</a>
+           <a class="dark-module" href="../数据中台HTML代码/sparksql.html">SparkSQL</a>
+           <a class="dark-module" href="../数据中台HTML代码/flinksql.html">FlinkSQL</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Block 2: System & Security -->
+    <div class="blue-container">
+      <div class="section-title">系统管理与安全</div>
+      <div class="sys-grid">
+        <a class="dark-module" href="../数据中台HTML代码/用户管理.html">用户管理</a>
+        <a class="dark-module" href="../数据中台HTML代码/用户管理.html">角色管理</a>
+        <a class="dark-module" href="../数据中台HTML代码/accesskey.html">权限认证</a>
+        <a class="dark-module" href="../数据中台HTML代码/通知公告管理.html">待办/公告</a>
+        
+        <!-- Vertical Spans -->
+        <div class="dark-module span-v" style="writing-mode: vertical-lr;">API配置</div>
+        <div class="dark-module span-v" style="writing-mode: vertical-lr;">动态模型</div>
+
+        <a class="dark-module" href="../数据中台HTML代码/logo__.html">Logo配置</a>
+        <a class="dark-module" href="../数据中台HTML代码/水印管理.html">水印管理</a>
+        <a class="dark-module" href="../数据中台HTML代码/日志管理.html">系统日志</a>
+        <a class="dark-module" href="../数据中台HTML代码/个人信息维护.html">个人信息</a>
+
+        <a class="dark-module" href="../数据中台HTML代码/转换数据运行统计.html">运行统计</a>
+        <a class="dark-module" href="../数据中台HTML代码/告警配置.html">告警配置</a>
+      </div>
+    </div>
+
+    <!-- Bottom Row 1: Collection -->
+    <div class="bottom-bar">
+      <div class="bar-label">数据集成</div>
+      <div class="bar-content">
+        <a class="wide-dark-btn" href="../数据中台HTML代码/数据源管理.html">数据源接入</a>
+        <a class="wide-dark-btn" href="../数据中台HTML代码/转换任务管理.html">离线/实时采集</a>
+        <a class="wide-dark-btn" href="../数据中台HTML代码/作业管理.html">数据整合清洗</a>
+        <a class="wide-dark-btn" href="../数据中台HTML代码/作业调度插件.html">自动调度</a>
+      </div>
+    </div>
+
+    <!-- Bottom Row 2: Distribution -->
+    <div class="bottom-bar">
+      <div class="bar-label">数据分发</div>
+      <div class="bar-content">
+        <a class="wide-dark-btn" href="../数据中台HTML代码/数据服务.html">API服务生成</a>
+        <a class="wide-dark-btn" href="../数据中台HTML代码/服务集成.html">服务集成监控</a>
+        <a class="wide-dark-btn" href="./index.html#//plaza">资产发布广场</a>
+        <a class="wide-dark-btn" href="../数据中台HTML代码/数据脱敏.html">脱敏分发</a>
+      </div>
+    </div>
+
   </div>
 
-  <div class="diagram">
-    <div class="row">
-      <div class="col">
-        <div class="card">
-          <div class="card__h"><div class="card__t">数据集成</div><span class="tag">采集与转换</span></div>
-          <div class="card__b">
-            <a class="item link" href="../数据中台HTML代码/数据源管理.html">数据源管理</a>
-            <a class="item link" href="../数据中台HTML代码/转换任务管理.html">转换任务</a>
-            <a class="item link" href="../数据中台HTML代码/作业管理.html">作业管理</a>
-            <a class="item link" href="../数据中台HTML代码/作业调度插件.html">调度插件</a>
-            <a class="item link" href="../数据中台HTML代码/转换插件清单.html">转换插件库</a>
-            <a class="item link" href="../数据中台HTML代码/作业日志.html">运行日志</a>
-            <a class="item link" href="../数据中台HTML代码/转换数据运行统计.html">运行统计</a>
-            <a class="item link" href="../数据中台HTML代码/集成预警规则.html">监控预警</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__h"><div class="card__t">数据开发</div><span class="tag">离线/实时</span></div>
-          <div class="card__b">
-            <a class="item link" href="../数据中台HTML代码/离线开发.html">离线开发</a>
-            <a class="item link" href="../数据中台HTML代码/sparksql.html">SparkSQL</a>
-            <a class="item link" href="../数据中台HTML代码/spark.html">Spark作业</a>
-            <a class="item link" href="../数据中台HTML代码/实时开发.html">实时开发</a>
-            <a class="item link" href="../数据中台HTML代码/flinksql.html">FlinkSQL</a>
-            <a class="item link" href="../数据中台HTML代码/离线开发调度.html">离线调度</a>
-            <a class="item link" href="../数据中台HTML代码/实时开发调度.html">实时调度</a>
-          </div>
-        </div>
-      </div>
+  <!-- Right Sidebar -->
+  <div class="sidebar">数据安全</div>
 
-      <div class="col">
-        <div class="card">
-          <div class="card__h"><div class="card__t">元数据</div><span class="tag">全量台账</span></div>
-          <div class="card__b">
-            <a class="item link" href="./index.html#//metadata">数据源</a>
-            <a class="item link" href="./index.html#//metadata">表</a>
-            <a class="item link" href="./index.html#//metadata">字段</a>
-            <a class="item link" href="./index.html#//metadata">血缘</a>
-            <a class="item link" href="../数据中台HTML代码/元数据检索.html">元数据检索</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__h"><div class="card__t">数据标准</div><span class="tag">口径统一</span></div>
-          <div class="card__b">
-            <a class="item link" href="./index.html#//standards">标准库</a>
-            <a class="item link" href="../数据中台HTML代码/标准集管理.html">标准集</a>
-            <a class="item link" href="../数据中台HTML代码/数据标准管理.html">数据标准</a>
-            <a class="item link" href="../数据中台HTML代码/标准模板管理.html">模板</a>
-            <a class="item link" href="../数据中台HTML代码/标准词根管理.html">词根</a>
-            <a class="item link" href="../数据中台HTML代码/标准码值管理.html">码值</a>
-            <a class="item link" href="../数据中台HTML代码/标准文档管理.html">文档</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card">
-          <div class="card__h"><div class="card__t">数据质量</div><span class="tag">规则与任务</span></div>
-          <div class="card__b">
-            <a class="item link" href="../数据中台HTML代码/数据质量规则库.html">规则库</a>
-            <a class="item link" href="../数据中台HTML代码/数据质量任务管理.html">质量任务</a>
-            <a class="item link" href="../数据中台HTML代码/质量报告管理.html">质量报告</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__h"><div class="card__t">数据服务与共享</div><span class="tag">发布与申请</span></div>
-          <div class="card__b">
-            <a class="item link" href="./index.html#//plaza">资产广场</a>
-            <a class="item link" href="../数据中台HTML代码/数据服务.html">API服务</a>
-            <a class="item link" href="../数据中台HTML代码/数据脱敏.html">数据脱敏</a>
-            <a class="item link" href="../数据中台HTML代码/服务集成.html">服务集成</a>
-            <span class="item">权限申请/审批</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card">
-          <div class="card__h"><div class="card__t">安全与合规</div><span class="tag">认证与分级</span></div>
-          <div class="card__b">
-            <a class="item link" href="../数据中台HTML代码/accesskey.html">AccessKey认证</a>
-            <a class="item link" href="../数据中台HTML代码/kerberos__.html">Kerberos认证</a>
-            <span class="item">数据分级</span>
-            <a class="item link" href="../数据中台HTML代码/用户管理.html">用户/角色/组织</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__h"><div class="card__t">运维与系统</div><span class="tag">监控与配置</span></div>
-          <div class="card__b">
-            <a class="item link" href="../数据中台HTML代码/日志管理.html">系统日志</a>
-            <a class="item link" href="../数据中台HTML代码/告警配置.html">告警配置</a>
-            <a class="item link" href="../数据中台HTML代码/告警记录列表.html">告警记录</a>
-            <a class="item link" href="../数据中台HTML代码/字典表管理.html">字典表</a>
-            <a class="item link" href="../数据中台HTML代码/通知公告管理.html">通知公告</a>
-            <a class="item link" href="../数据中台HTML代码/logo__.html">Logo配置</a>
-            <a class="item link" href="../数据中台HTML代码/水印管理.html">水印管理</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="foot">
-      <div class="lane">
-        <span class="chip">ODS</span>
-        <span class="chip">DWD</span>
-        <span class="chip">ADS</span>
-      </div>
-      <span class="note">数仓分层贯穿元数据、标准、资产与申请审批全流程，形成 ODS→DWD→ADS 的加工与服务闭环。</span>
-    </div>
-  </div>
 </div>
+
 </body>
 </html>
