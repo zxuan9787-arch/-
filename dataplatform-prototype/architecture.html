@@ -32,9 +32,9 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
 
 /* Sidebars (Vertical Text) */
 .sidebar {
-  background-color: #9ecaf1; /* Light Blue */
-  border: 1px solid #5b9bd5;
-  color: #000;
+  background-color: #2e8def; /* Strong Blue */
+  border: 1px solid #1c6cbd;
+  color: #fff;
   font-size: 20px;
   font-weight: 700;
   display: flex;
@@ -60,8 +60,8 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
   gap: 0;
 }
 .row-label {
-  background-color: #e0e0e0;
-  border: 1px solid #999;
+  background-color: #f3f4f6;
+  border: 1px solid #1c6cbd;
   width: 100px;
   display: flex;
   align-items: center;
@@ -70,6 +70,7 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
   font-size: 14px;
   margin-right: 10px;
   flex-shrink: 0;
+  color: #1e3a8a;
 }
 .row-content {
   flex: 1;
@@ -78,9 +79,9 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
 }
 .white-box {
   flex: 1;
-  border: 2px solid #5b9bd5;
+  border: 2px solid #3b82f6;
   background: #fff;
-  color: #000;
+  color: #1e3a8a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,8 +94,8 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
 
 /* Main Governance Area (Blue Container) */
 .blue-container {
-  background-color: #cfe2f3;
-  border: 1px solid #fff;
+  background-color: #f0f7ff;
+  border: 1px solid #dbeafe;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -115,7 +116,7 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
 }
 .split-left {
   flex: 2;
-  background: #9abfe2; /* Slightly darker blue */
+  background: #3b82f6; /* Blue 500 */
   padding: 15px;
   display: flex;
   align-items: center;
@@ -125,7 +126,7 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
 }
 .split-right {
   flex: 3;
-  background: #9abfe2;
+  background: #60a5fa; /* Blue 400 */
   padding: 15px;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 cols */
@@ -135,7 +136,7 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
 
 /* Dark Modules */
 .dark-module {
-  background-color: #405060; /* Dark Grey/Blue */
+  background-color: #1e40af; /* Blue 800 */
   color: #fff;
   font-size: 13px;
   display: flex;
@@ -146,10 +147,11 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
   cursor: pointer;
   transition: transform 0.1s, background-color 0.1s;
   min-height: 36px;
+  border: 1px solid #1e3a8a;
 }
 .dark-module:hover {
   transform: translateY(-2px);
-  background-color: #2e8def;
+  background-color: #2563eb;
 }
 
 /* Circular Flow Animation (Simplified) */
@@ -163,14 +165,14 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
   width: 44px;
   height: 44px;
   background: #fff;
-  border: 2px solid #2e8def;
+  border: 2px solid #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   font-weight: 700;
-  color: #2e8def;
+  color: #1e3a8a;
   z-index: 2;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -182,9 +184,9 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
 /* Arrows (CSS borders) */
 .flow-arrow {
   position: absolute;
-  border: 2px dashed #405060;
+  border: 2px dashed #fff;
   z-index: 1;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 /* System Management Grid */
@@ -200,7 +202,7 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
 .bottom-bar {
   display: flex;
   align-items: stretch;
-  background-color: #cfe2f3; /* Same as container bg */
+  background-color: #f0f7ff; /* Same as container bg */
   padding: 10px;
 }
 .bar-label {
@@ -208,7 +210,7 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
   display: flex;
   align-items: center;
   font-weight: 700;
-  color: #333;
+  color: #1e3a8a;
 }
 .bar-content {
   flex: 1;
@@ -217,15 +219,16 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
 }
 .wide-dark-btn {
   flex: 1;
-  background-color: #405060;
+  background-color: #1e40af;
   color: #fff;
   padding: 10px;
   text-align: center;
   font-size: 14px;
   cursor: pointer;
   transition: opacity 0.2s;
+  border: 1px solid #1e3a8a;
 }
-.wide-dark-btn:hover { opacity: 0.9; }
+.wide-dark-btn:hover { background-color: #2563eb; }
 
 /* Responsive */
 @media (max-width: 1000px) {
@@ -285,13 +288,13 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
              <div class="flow-node n4">服务</div>
              <!-- Connecting Lines (Visual only) -->
              <svg width="200" height="150" style="position:absolute; top:0; left:0; transform: rotate(0deg);">
-               <path d="M 20 75 Q 20 20 100 20" fill="none" stroke="#405060" stroke-width="2" marker-end="url(#arrow)" />
-               <path d="M 100 20 Q 180 20 180 75" fill="none" stroke="#405060" stroke-width="2" marker-end="url(#arrow)" />
-               <path d="M 180 75 Q 180 130 100 130" fill="none" stroke="#405060" stroke-width="2" marker-end="url(#arrow)" />
-               <path d="M 100 130 Q 20 130 20 75" fill="none" stroke="#405060" stroke-width="2" marker-end="url(#arrow)" />
+               <path d="M 20 75 Q 20 20 100 20" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrow)" />
+               <path d="M 100 20 Q 180 20 180 75" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrow)" />
+               <path d="M 180 75 Q 180 130 100 130" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrow)" />
+               <path d="M 100 130 Q 20 130 20 75" fill="none" stroke="#fff" stroke-width="2" marker-end="url(#arrow)" />
                <defs>
                  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-                   <path d="M0,0 L0,6 L9,3 z" fill="#405060" />
+                   <path d="M0,0 L0,6 L9,3 z" fill="#fff" />
                  </marker>
                </defs>
              </svg>
@@ -299,8 +302,8 @@ a { text-decoration: none; color: inherit; display: block; width: 100%; height: 
            
            <!-- Side buttons in flow area -->
            <div style="position:absolute; right:10px; top:20px; display:flex; flex-direction:column; gap:8px;">
-             <a class="dark-module" style="width:100px; background:#2c3e50;" href="../数据中台HTML代码/转换任务管理.html">转换任务</a>
-             <a class="dark-module" style="width:100px; background:#2c3e50;" href="../数据中台HTML代码/作业管理.html">作业调度</a>
+             <a class="dark-module" style="width:100px; background:#1e40af;" href="../数据中台HTML代码/转换任务管理.html">转换任务</a>
+             <a class="dark-module" style="width:100px; background:#1e40af;" href="../数据中台HTML代码/作业管理.html">作业调度</a>
            </div>
         </div>
 
