@@ -1,0 +1,1682 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>PostgreSqlCDC输入（实时）</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/postgresqlcdc______/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/postgresqlcdc______/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u9505" class="ax_default _默认样式">
+        <div id="u9505_div" class=""></div>
+        <div id="u9505_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u9506" class="ax_default _默认样式">
+        <div id="u9506_div" class=""></div>
+        <div id="u9506_text" class="text ">
+          <p><span>PostgreSqlCDC输入</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u9507" class="ax_default" data-left="21" data-top="705" data-width="632" data-height="60" layer-opacity="1">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u9508" class="ax_default _默认样式">
+          <div id="u9508_div" class=""></div>
+          <div id="u9508_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u9509" class="ax_default _默认样式">
+          <div id="u9509_div" class=""></div>
+          <div id="u9509_text" class="text ">
+            <p><span>保存</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u9510" class="ax_default _默认样式">
+          <img id="u9510_img" class="img " src="images/表输入（离线）/u5191.svg"/>
+          <div id="u9510_text" class="text ">
+            <p><span>取消</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片 ) -->
+      <div id="u9511" class="ax_default _图片_1">
+        <img id="u9511_img" class="img " src="images/权限审批页面（审核员）/u1363.png"/>
+        <div id="u9511_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (热区) -->
+      <div id="u9512" class="ax_default">
+      </div>
+
+      <!-- Unnamed (动态面板) -->
+      <div id="u9513" class="ax_default">
+        <div id="u9513_state0" class="panel_state" data-label="State1" style="">
+          <div id="u9513_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u9514" class="ax_default _默认样式">
+              <div id="u9514_div" class=""></div>
+              <div id="u9514_text" class="text ">
+                <p><span style="font-family:'Helvetica', sans-serif;color:#FF3B30;">*</span><span style="font-family:'Helvetica', sans-serif;color:#666666;"> </span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;color:#666666;">源表:</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u9515" class="ax_default _形状" title="刷新">
+              <img id="u9515_img" class="img " src="images/转换插件全局说明/u4861.svg"/>
+              <div id="u9515_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- 级联选择器 (动态面板) -->
+            <div id="u9516" class="ax_default" data-label="级联选择器">
+              <div id="u9516_state0" class="panel_state" data-label="级联选择器" style="">
+                <div id="u9516_state0_content" class="panel_state_content">
+
+                  <!-- 选项区域 (动态面板) -->
+                  <div id="u9517" class="ax_default ax_default_hidden" data-label="选项区域" style="display:none; visibility: hidden">
+                    <div id="u9517_state0" class="panel_state" data-label="选项区域" style="">
+                      <div id="u9517_state0_content" class="panel_state_content">
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9518" class="ax_default _默认样式">
+                          <div id="u9518_div" class=""></div>
+                          <div id="u9518_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (组合) -->
+                        <div id="u9519" class="ax_default" data-left="7" data-top="11" data-width="385" data-height="28" layer-opacity="1">
+
+                          <!-- Unnamed (矩形) -->
+                          <div id="u9520" class="ax_default shape1">
+                            <div id="u9520_div" class=""></div>
+                            <div id="u9520_text" class="text ">
+                              <p><span>请输入关键字</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组合) -->
+                          <div id="u9521" class="ax_default" data-left="373" data-top="20" data-width="11.6213203435597" data-height="12.6213203435597" layer-opacity="1">
+
+                            <!-- Unnamed (矩形) -->
+                            <div id="u9522" class="ax_default shape1">
+                              <div id="u9522_div" class=""></div>
+                              <div id="u9522_text" class="text " style="display:none; visibility: hidden">
+                                <p></p>
+                              </div>
+                            </div>
+
+                            <!-- Unnamed (线段) -->
+                            <div id="u9523" class="ax_default line1">
+                              <img id="u9523_img" class="img " src="images/新增转换任务（第二步）/u4618.svg"/>
+                              <div id="u9523_text" class="text " style="display:none; visibility: hidden">
+                                <p></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9524" class="ax_default label">
+                          <div id="u9524_div" class=""></div>
+                          <div id="u9524_text" class="text ">
+                            <p><span>XXXXX表1</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9525" class="ax_default label">
+                          <div id="u9525_div" class=""></div>
+                          <div id="u9525_text" class="text ">
+                            <p><span>XXXXX表2</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9526" class="ax_default label">
+                          <div id="u9526_div" class=""></div>
+                          <div id="u9526_text" class="text ">
+                            <p><span>XXXXX表3</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9527" class="ax_default label">
+                          <div id="u9527_div" class=""></div>
+                          <div id="u9527_text" class="text ">
+                            <p><span>XXXXX表4</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9528" class="ax_default label">
+                          <div id="u9528_div" class=""></div>
+                          <div id="u9528_text" class="text ">
+                            <p><span>XXXXX表5</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9529" class="ax_default label">
+                          <div id="u9529_div" class=""></div>
+                          <div id="u9529_text" class="text ">
+                            <p><span>XXXXX表6</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9530" class="ax_default label">
+                          <div id="u9530_div" class=""></div>
+                          <div id="u9530_text" class="text ">
+                            <p><span>XXXXX表6</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u9531" class="ax_default" data-left="0" data-top="0" data-width="399" data-height="40" layer-opacity="1">
+
+                    <!-- 选择框 (矩形) -->
+                    <div id="u9532" class="ax_default _默认样式" data-label="选择框">
+                      <div id="u9532_div" class=""></div>
+                      <div id="u9532_text" class="text ">
+                        <p><span>请选择源表</span></p>
+                      </div>
+                    </div>
+
+                    <!-- 图标 (矩形) -->
+                    <div id="u9533" class="ax_default _默认样式" data-label="图标">
+                      <div id="u9533_div" class=""></div>
+                      <div id="u9533_text" class="text ">
+                        <p><span></span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u9534" class="ax_default button">
+              <div id="u9534_div" class=""></div>
+              <div id="u9534_text" class="text ">
+                <p><span>选择表字段</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u9535" class="ax_default heading_11">
+              <img id="u9535_img" class="img " src="images/新增转换任务（第二步）/u4597.svg"/>
+              <div id="u9535_text" class="text ">
+                <p><span>字段内容</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (动态面板) -->
+            <div id="u9536" class="ax_default">
+              <div id="u9536_state0" class="panel_state" data-label="State1" style="">
+                <div id="u9536_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u9537" class="ax_default" data-left="0" data-top="0" data-width="591" data-height="170" layer-opacity="1">
+
+                    <!-- Unnamed (矩形) -->
+                    <div id="u9538" class="ax_default box_2">
+                      <div id="u9538_div" class=""></div>
+                      <div id="u9538_text" class="text ">
+                        <p><span>源表字段</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (矩形) -->
+                    <div id="u9539" class="ax_default box_2">
+                      <div id="u9539_div" class=""></div>
+                      <div id="u9539_text" class="text " style="display:none; visibility: hidden">
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (组合) -->
+                    <div id="u9540" class="ax_default" data-left="268" data-top="59" data-width="57" data-height="82" layer-opacity="1">
+
+                      <!-- Unnamed (矩形) -->
+                      <div id="u9541" class="ax_default heading_11">
+                        <div id="u9541_div" class=""></div>
+                        <div id="u9541_text" class="text ">
+                          <p><span>暂无数据</span></p>
+                        </div>
+                      </div>
+
+                      <!-- Unnamed (图片 ) -->
+                      <div id="u9542" class="ax_default image1">
+                        <img id="u9542_img" class="img " src="images/转换插件全局说明/u4784.png"/>
+                        <div id="u9542_text" class="text " style="display:none; visibility: hidden">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u9536_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
+                <div id="u9536_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u9543" class="ax_default box_2">
+                    <div id="u9543_div" class=""></div>
+                    <div id="u9543_text" class="text ">
+                      <p><span>源表字段</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u9544" class="ax_default box_2">
+                    <div id="u9544_div" class=""></div>
+                    <div id="u9544_text" class="text ">
+                      <p><span>暂无数据</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (动态面板) -->
+                  <div id="u9545" class="ax_default">
+                    <div id="u9545_state0" class="panel_state" data-label="State1" style="">
+                      <div id="u9545_state0_content" class="panel_state_content">
+
+                        <!-- Unnamed (表格) -->
+                        <div id="u9546" class="ax_default">
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9547" class="ax_default table_cell">
+                            <img id="u9547_img" class="img " src="images/新增转换任务（第二步）/u4602.png"/>
+                            <div id="u9547_text" class="text ">
+                              <p><span>Column 1</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9548" class="ax_default table_cell">
+                            <img id="u9548_img" class="img " src="images/新增转换任务（第二步）/u4603.png"/>
+                            <div id="u9548_text" class="text ">
+                              <p><span>String</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9549" class="ax_default table_cell">
+                            <img id="u9549_img" class="img " src="images/新增转换任务（第二步）/u4604.png"/>
+                            <div id="u9549_text" class="text ">
+                              <p><span>Column 2</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9550" class="ax_default table_cell">
+                            <img id="u9550_img" class="img " src="images/新增转换任务（第二步）/u4605.png"/>
+                            <div id="u9550_text" class="text ">
+                              <p><span>Integer</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9551" class="ax_default table_cell">
+                            <img id="u9551_img" class="img " src="images/新增转换任务（第二步）/u4606.png"/>
+                            <div id="u9551_text" class="text ">
+                              <p><span>Column 3</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9552" class="ax_default table_cell">
+                            <img id="u9552_img" class="img " src="images/新增转换任务（第二步）/u4607.png"/>
+                            <div id="u9552_text" class="text ">
+                              <p><span>Long</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9553" class="ax_default table_cell">
+                            <img id="u9553_img" class="img " src="images/新增转换任务（第二步）/u4608.png"/>
+                            <div id="u9553_text" class="text ">
+                              <p><span>Column 1</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9554" class="ax_default table_cell">
+                            <img id="u9554_img" class="img " src="images/新增转换任务（第二步）/u4609.png"/>
+                            <div id="u9554_text" class="text ">
+                              <p><span>Short</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9555" class="ax_default table_cell">
+                            <img id="u9555_img" class="img " src="images/新增转换任务（第二步）/u4606.png"/>
+                            <div id="u9555_text" class="text ">
+                              <p><span>Column 2</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9556" class="ax_default table_cell">
+                            <img id="u9556_img" class="img " src="images/新增转换任务（第二步）/u4607.png"/>
+                            <div id="u9556_text" class="text ">
+                              <p><span>Float</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9557" class="ax_default table_cell">
+                            <img id="u9557_img" class="img " src="images/新增转换任务（第二步）/u4608.png"/>
+                            <div id="u9557_text" class="text ">
+                              <p><span>Column 1</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9558" class="ax_default table_cell">
+                            <img id="u9558_img" class="img " src="images/新增转换任务（第二步）/u4609.png"/>
+                            <div id="u9558_text" class="text ">
+                              <p><span>Double</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9559" class="ax_default table_cell">
+                            <img id="u9559_img" class="img " src="images/新增转换任务（第二步）/u4606.png"/>
+                            <div id="u9559_text" class="text ">
+                              <p><span>Column 2</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9560" class="ax_default table_cell">
+                            <img id="u9560_img" class="img " src="images/新增转换任务（第二步）/u4607.png"/>
+                            <div id="u9560_text" class="text ">
+                              <p><span>Boolean</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9561" class="ax_default table_cell">
+                            <img id="u9561_img" class="img " src="images/新增转换任务（第二步）/u4608.png"/>
+                            <div id="u9561_text" class="text ">
+                              <p><span>Column 1</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9562" class="ax_default table_cell">
+                            <img id="u9562_img" class="img " src="images/新增转换任务（第二步）/u4609.png"/>
+                            <div id="u9562_text" class="text ">
+                              <p><span>Date</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9563" class="ax_default table_cell">
+                            <img id="u9563_img" class="img " src="images/新增转换任务（第二步）/u4606.png"/>
+                            <div id="u9563_text" class="text ">
+                              <p><span>Column 2</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9564" class="ax_default table_cell">
+                            <img id="u9564_img" class="img " src="images/新增转换任务（第二步）/u4607.png"/>
+                            <div id="u9564_text" class="text ">
+                              <p><span>Byte</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9565" class="ax_default table_cell">
+                            <img id="u9565_img" class="img " src="images/新增转换任务（第二步）/u4608.png"/>
+                            <div id="u9565_text" class="text ">
+                              <p><span>Column 1</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9566" class="ax_default table_cell">
+                            <img id="u9566_img" class="img " src="images/新增转换任务（第二步）/u4609.png"/>
+                            <div id="u9566_text" class="text ">
+                              <p><span>BigDecimal</span></p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9567" class="ax_default _形状3">
+                          <img id="u9567_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9567_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9568" class="ax_default _形状3">
+                          <img id="u9568_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9568_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9569" class="ax_default _形状3">
+                          <img id="u9569_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9569_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9570" class="ax_default _形状3">
+                          <img id="u9570_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9570_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9571" class="ax_default _形状3">
+                          <img id="u9571_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9571_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9572" class="ax_default _形状3">
+                          <img id="u9572_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9572_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9573" class="ax_default _形状3">
+                          <img id="u9573_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9573_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9574" class="ax_default _形状3">
+                          <img id="u9574_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9574_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9575" class="ax_default _形状3">
+                          <img id="u9575_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9575_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (形状) -->
+                        <div id="u9576" class="ax_default _形状3">
+                          <img id="u9576_img" class="img " src="images/新增转换任务（第二步）/u4610.svg"/>
+                          <div id="u9576_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (组合) -->
+            <div id="u9577" class="ax_default" data-left="345" data-top="214" data-width="246" data-height="28" layer-opacity="1">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u9578" class="ax_default shape1">
+                <div id="u9578_div" class=""></div>
+                <div id="u9578_text" class="text ">
+                  <p><span>请输入名称进行匹配</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (组合) -->
+              <div id="u9579" class="ax_default" data-left="571" data-top="223" data-width="11.6213203435597" data-height="12.6213203435597" layer-opacity="1">
+
+                <!-- Unnamed (矩形) -->
+                <div id="u9580" class="ax_default shape1">
+                  <div id="u9580_div" class=""></div>
+                  <div id="u9580_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                  </div>
+                </div>
+
+                <!-- Unnamed (线段) -->
+                <div id="u9581" class="ax_default line1">
+                  <img id="u9581_img" class="img " src="images/新增转换任务（第二步）/u4618.svg"/>
+                  <div id="u9581_text" class="text " style="display:none; visibility: hidden">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u9582" class="ax_default _默认样式">
+              <div id="u9582_div" class=""></div>
+              <div id="u9582_text" class="text ">
+                <p><span style="font-family:'Helvetica', sans-serif;color:#FF3B30;">*</span><span style="font-family:'Helvetica', sans-serif;color:#666666;"> 读取数据模式</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;color:#666666;">:</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (下拉列表) -->
+            <div id="u9583" class="ax_default droplist">
+              <div id="u9583_div" class=""></div>
+              <select id="u9583_input" class="u9583_input">
+                <option class="u9583_input_option" value="请选择读取数据模式">请选择读取数据模式</option>
+                <option class="u9583_input_option" value="增量读取：不处理历史数据，只处理增量变更数据">增量读取：不处理历史数据，只处理增量变更数据</option>
+                <option class="u9583_input_option" value="全量读取：进行全量读取，然后再捕获增量变更">全量读取：进行全量读取，然后再捕获增量变更</option>
+              </select>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u9584" class="ax_default _默认样式">
+              <div id="u9584_div" class=""></div>
+              <div id="u9584_text" class="text ">
+                <p><span style="font-family:'Helvetica', sans-serif;color:#FF3B30;">*</span><span style="font-family:'Helvetica', sans-serif;color:#666666;"> </span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;color:#666666;">源数据库:</span></p>
+              </div>
+            </div>
+
+            <!-- 级联选择器 (动态面板) -->
+            <div id="u9585" class="ax_default" data-label="级联选择器">
+              <div id="u9585_state0" class="panel_state" data-label="级联选择器" style="">
+                <div id="u9585_state0_content" class="panel_state_content">
+
+                  <!-- 选项区域 (动态面板) -->
+                  <div id="u9586" class="ax_default ax_default_hidden" data-label="选项区域" style="display:none; visibility: hidden">
+                    <div id="u9586_state0" class="panel_state" data-label="选项区域" style="">
+                      <div id="u9586_state0_content" class="panel_state_content">
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9587" class="ax_default _默认样式">
+                          <div id="u9587_div" class=""></div>
+                          <div id="u9587_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (组合) -->
+                        <div id="u9588" class="ax_default" data-left="7" data-top="11" data-width="385" data-height="28" layer-opacity="1">
+
+                          <!-- Unnamed (矩形) -->
+                          <div id="u9589" class="ax_default shape1">
+                            <div id="u9589_div" class=""></div>
+                            <div id="u9589_text" class="text ">
+                              <p><span>请输入关键字</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组合) -->
+                          <div id="u9590" class="ax_default" data-left="373" data-top="20" data-width="11.6213203435597" data-height="12.6213203435597" layer-opacity="1">
+
+                            <!-- Unnamed (矩形) -->
+                            <div id="u9591" class="ax_default shape1">
+                              <div id="u9591_div" class=""></div>
+                              <div id="u9591_text" class="text " style="display:none; visibility: hidden">
+                                <p></p>
+                              </div>
+                            </div>
+
+                            <!-- Unnamed (线段) -->
+                            <div id="u9592" class="ax_default line1">
+                              <img id="u9592_img" class="img " src="images/新增转换任务（第二步）/u4618.svg"/>
+                              <div id="u9592_text" class="text " style="display:none; visibility: hidden">
+                                <p></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9593" class="ax_default label">
+                          <div id="u9593_div" class=""></div>
+                          <div id="u9593_text" class="text ">
+                            <p><span>数据库1</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9594" class="ax_default label">
+                          <div id="u9594_div" class=""></div>
+                          <div id="u9594_text" class="text ">
+                            <p><span>数据库2</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9595" class="ax_default label">
+                          <div id="u9595_div" class=""></div>
+                          <div id="u9595_text" class="text ">
+                            <p><span>数据库3</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9596" class="ax_default label">
+                          <div id="u9596_div" class=""></div>
+                          <div id="u9596_text" class="text ">
+                            <p><span>数据库4</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9597" class="ax_default label">
+                          <div id="u9597_div" class=""></div>
+                          <div id="u9597_text" class="text ">
+                            <p><span>数据库5</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9598" class="ax_default label">
+                          <div id="u9598_div" class=""></div>
+                          <div id="u9598_text" class="text ">
+                            <p><span>数据库6</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u9599" class="ax_default" data-left="0" data-top="0" data-width="399" data-height="40" layer-opacity="1">
+
+                    <!-- 选择框 (矩形) -->
+                    <div id="u9600" class="ax_default _默认样式" data-label="选择框">
+                      <div id="u9600_div" class=""></div>
+                      <div id="u9600_text" class="text ">
+                        <p><span>请选择源数据库</span></p>
+                      </div>
+                    </div>
+
+                    <!-- 图标 (矩形) -->
+                    <div id="u9601" class="ax_default _默认样式" data-label="图标">
+                      <div id="u9601_div" class=""></div>
+                      <div id="u9601_text" class="text ">
+                        <p><span></span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (形状) -->
+            <div id="u9602" class="ax_default _形状" title="刷新">
+              <img id="u9602_img" class="img " src="images/转换插件全局说明/u4861.svg"/>
+              <div id="u9602_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u9603" class="ax_default _默认样式">
+              <div id="u9603_div" class=""></div>
+              <div id="u9603_text" class="text ">
+                <p><span style="font-family:'Helvetica', sans-serif;color:#FF3B30;">*</span><span style="font-family:'Helvetica', sans-serif;color:#666666;"> 源数据源</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;color:#666666;">:</span></p>
+              </div>
+            </div>
+
+            <!-- 级联选择器 (动态面板) -->
+            <div id="u9604" class="ax_default" data-label="级联选择器">
+              <div id="u9604_state0" class="panel_state" data-label="级联选择器" style="">
+                <div id="u9604_state0_content" class="panel_state_content">
+
+                  <!-- 选项区域 (动态面板) -->
+                  <div id="u9605" class="ax_default ax_default_hidden" data-label="选项区域" style="display:none; visibility: hidden">
+                    <div id="u9605_state0" class="panel_state" data-label="选项区域" style="">
+                      <div id="u9605_state0_content" class="panel_state_content">
+
+                        <!-- Unnamed (矩形) -->
+                        <div id="u9606" class="ax_default _默认样式">
+                          <div id="u9606_div" class=""></div>
+                          <div id="u9606_text" class="text " style="display:none; visibility: hidden">
+                            <p></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (树) -->
+                        <div id="u9607" class="ax_default tree_node treeroot">
+                          <div id="u9607_children" class="u9607_children">
+
+                            <!-- Unnamed (节点) -->
+                            <div id="u9608" class="ax_default tree_node treenode">
+
+                              <!-- Unnamed (图片 ) -->
+                              <div id="u9609" class="ax_default _图片_1">
+                                <img id="u9609_img" class="img " src="images/转换插件全局说明/u4793_selected.png"/>
+                                <div id="u9609_text" class="text " style="display:none; visibility: hidden">
+                                  <p></p>
+                                </div>
+                              </div>
+                              <!-- Unnamed (矩形) -->
+                              <div id="u9610" class="" selectiongroup="u9607_tree_group">
+                                <div id="u9610_div" class=""></div>
+                                <div id="u9610_text" class="text ">
+                                  <p><span>MySQL</span></p>
+                                </div>
+                              </div>
+                              <div id="u9608_children" class="u9608_children">
+
+                                <!-- Unnamed (节点) -->
+                                <div id="u9611" class="ax_default tree_node treenode">
+                                  <!-- Unnamed (矩形) -->
+                                  <div id="u9612" class="" selectiongroup="u9607_tree_group">
+                                    <div id="u9612_div" class=""></div>
+                                    <div id="u9612_text" class="text ">
+                                      <p><span>XXX数据源名称1</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Unnamed (节点) -->
+                                <div id="u9613" class="ax_default tree_node treenode">
+                                  <!-- Unnamed (矩形) -->
+                                  <div id="u9614" class="" selectiongroup="u9607_tree_group">
+                                    <div id="u9614_div" class=""></div>
+                                    <div id="u9614_text" class="text ">
+                                      <p><span>XXX数据源名称2</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Unnamed (节点) -->
+                                <div id="u9615" class="ax_default tree_node treenode">
+                                  <!-- Unnamed (矩形) -->
+                                  <div id="u9616" class="" selectiongroup="u9607_tree_group">
+                                    <div id="u9616_div" class=""></div>
+                                    <div id="u9616_text" class="text ">
+                                      <p><span>XXX数据源名称3</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Unnamed (节点) -->
+                            <div id="u9617" class="ax_default tree_node treenode">
+
+                              <!-- Unnamed (图片 ) -->
+                              <div id="u9618" class="ax_default _图片_1">
+                                <img id="u9618_img" class="img " src="images/转换插件全局说明/u4793_selected.png"/>
+                                <div id="u9618_text" class="text " style="display:none; visibility: hidden">
+                                  <p></p>
+                                </div>
+                              </div>
+                              <!-- Unnamed (矩形) -->
+                              <div id="u9619" class="" selectiongroup="u9607_tree_group">
+                                <div id="u9619_div" class=""></div>
+                                <div id="u9619_text" class="text ">
+                                  <p><span>Oracle</span></p>
+                                </div>
+                              </div>
+                              <div id="u9617_children" class="u9617_children">
+
+                                <!-- Unnamed (节点) -->
+                                <div id="u9620" class="ax_default tree_node treenode">
+                                  <!-- Unnamed (矩形) -->
+                                  <div id="u9621" class="" selectiongroup="u9607_tree_group">
+                                    <div id="u9621_div" class=""></div>
+                                    <div id="u9621_text" class="text ">
+                                      <p><span>XXX数据源名称11</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Unnamed (节点) -->
+                                <div id="u9622" class="ax_default tree_node treenode">
+                                  <!-- Unnamed (矩形) -->
+                                  <div id="u9623" class="" selectiongroup="u9607_tree_group">
+                                    <div id="u9623_div" class=""></div>
+                                    <div id="u9623_text" class="text ">
+                                      <p><span>XXX数据源名称22</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (组合) -->
+                        <div id="u9624" class="ax_default" data-left="7" data-top="11" data-width="385" data-height="28" layer-opacity="1">
+
+                          <!-- Unnamed (矩形) -->
+                          <div id="u9625" class="ax_default shape1">
+                            <div id="u9625_div" class=""></div>
+                            <div id="u9625_text" class="text ">
+                              <p><span>请输入关键字</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (组合) -->
+                          <div id="u9626" class="ax_default" data-left="373" data-top="20" data-width="11.6213203435597" data-height="12.6213203435597" layer-opacity="1">
+
+                            <!-- Unnamed (矩形) -->
+                            <div id="u9627" class="ax_default shape1">
+                              <div id="u9627_div" class=""></div>
+                              <div id="u9627_text" class="text " style="display:none; visibility: hidden">
+                                <p></p>
+                              </div>
+                            </div>
+
+                            <!-- Unnamed (线段) -->
+                            <div id="u9628" class="ax_default line1">
+                              <img id="u9628_img" class="img " src="images/新增转换任务（第二步）/u4618.svg"/>
+                              <div id="u9628_text" class="text " style="display:none; visibility: hidden">
+                                <p></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u9629" class="ax_default" data-left="0" data-top="0" data-width="399" data-height="40" layer-opacity="1">
+
+                    <!-- 选择框 (矩形) -->
+                    <div id="u9630" class="ax_default _默认样式" data-label="选择框">
+                      <div id="u9630_div" class=""></div>
+                      <div id="u9630_text" class="text ">
+                        <p><span>请选择数据源</span></p>
+                      </div>
+                    </div>
+
+                    <!-- 图标 (矩形) -->
+                    <div id="u9631" class="ax_default _默认样式" data-label="图标">
+                      <div id="u9631_div" class=""></div>
+                      <div id="u9631_text" class="text ">
+                        <p><span></span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 选择表字段 (动态面板) -->
+      <div id="u9632" class="ax_default ax_default_hidden" data-label="选择表字段" style="display:none; visibility: hidden">
+        <div id="u9632_state0" class="panel_state" data-label="State1" style="">
+          <div id="u9632_state0_content" class="panel_state_content">
+
+            <!-- Unnamed (矩形) -->
+            <div id="u9633" class="ax_default _默认样式">
+              <div id="u9633_div" class=""></div>
+              <div id="u9633_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (矩形) -->
+            <div id="u9634" class="ax_default _默认样式">
+              <div id="u9634_div" class=""></div>
+              <div id="u9634_text" class="text ">
+                <p><span>选择表字段</span></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (组合) -->
+            <div id="u9635" class="ax_default" data-left="0" data-top="481" data-width="800" data-height="60" layer-opacity="1">
+
+              <!-- Unnamed (矩形) -->
+              <div id="u9636" class="ax_default _默认样式">
+                <div id="u9636_div" class=""></div>
+                <div id="u9636_text" class="text " style="display:none; visibility: hidden">
+                  <p></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u9637" class="ax_default _默认样式">
+                <div id="u9637_div" class=""></div>
+                <div id="u9637_text" class="text ">
+                  <p><span>确定</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (矩形) -->
+              <div id="u9638" class="ax_default _默认样式">
+                <img id="u9638_img" class="img " src="images/表输入（离线）/u5191.svg"/>
+                <div id="u9638_text" class="text ">
+                  <p><span>取消</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unnamed (图片 ) -->
+            <div id="u9639" class="ax_default _图片_1">
+              <img id="u9639_img" class="img " src="images/权限审批页面（审核员）/u1363.png"/>
+              <div id="u9639_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Unnamed (热区) -->
+            <div id="u9640" class="ax_default">
+            </div>
+
+            <!-- Unnamed (动态面板) -->
+            <div id="u9641" class="ax_default">
+              <div id="u9641_state0" class="panel_state" data-label="State1" style="">
+                <div id="u9641_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u9642" class="ax_default" data-left="184" data-top="13" data-width="113" data-height="20" layer-opacity="1">
+
+                    <!-- Unnamed (形状) -->
+                    <div id="u9643" class="ax_default _形状">
+                      <img id="u9643_img" class="img " src="images/表输入（离线）/u5328.svg"/>
+                      <div id="u9643_text" class="text " style="display:none; visibility: hidden">
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (矩形) -->
+                    <div id="u9644" class="ax_default label">
+                      <div id="u9644_div" class=""></div>
+                      <div id="u9644_text" class="text ">
+                        <p><span>文本编辑字段</span></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u9645" class="ax_default" data-left="24" data-top="12" data-width="115" data-height="22" layer-opacity="1">
+
+                    <!-- Unnamed (矩形) -->
+                    <div id="u9646" class="ax_default label">
+                      <div id="u9646_div" class=""></div>
+                      <div id="u9646_text" class="text ">
+                        <p><span>列表选择字段</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (组合) -->
+                    <div id="u9647" class="ax_default" data-left="24" data-top="12" data-width="20" data-height="20" layer-opacity="1">
+
+                      <!-- Unnamed (形状) -->
+                      <div id="u9648" class="ax_default _形状">
+                        <img id="u9648_img" class="img " src="images/表输入（离线）/u5333.svg"/>
+                        <div id="u9648_text" class="text " style="display:none; visibility: hidden">
+                          <p></p>
+                        </div>
+                      </div>
+
+                      <!-- Unnamed (形状) -->
+                      <div id="u9649" class="ax_default _形状">
+                        <img id="u9649_img" class="img " src="images/表输入（离线）/u5334.svg"/>
+                        <div id="u9649_text" class="text " style="display:none; visibility: hidden">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (线段) -->
+                  <div id="u9650" class="ax_default line1">
+                    <img id="u9650_img" class="img " src="images/表输入（离线）/u5335.svg"/>
+                    <div id="u9650_text" class="text " style="display:none; visibility: hidden">
+                      <p></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u9651" class="ax_default box_32">
+                    <div id="u9651_div" class=""></div>
+                    <div id="u9651_text" class="text " style="display:none; visibility: hidden">
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u9641_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
+                <div id="u9641_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u9652" class="ax_default" data-left="184" data-top="13" data-width="113" data-height="21" layer-opacity="1">
+
+                    <!-- Unnamed (形状) -->
+                    <div id="u9653" class="ax_default _形状">
+                      <img id="u9653_img" class="img " src="images/表输入（离线）/u5338.svg"/>
+                      <div id="u9653_text" class="text " style="display:none; visibility: hidden">
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (矩形) -->
+                    <div id="u9654" class="ax_default label">
+                      <div id="u9654_div" class=""></div>
+                      <div id="u9654_text" class="text ">
+                        <p><span>文本编辑字段</span></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u9655" class="ax_default" data-left="24" data-top="12" data-width="115" data-height="22" layer-opacity="1">
+
+                    <!-- Unnamed (矩形) -->
+                    <div id="u9656" class="ax_default label">
+                      <div id="u9656_div" class=""></div>
+                      <div id="u9656_text" class="text ">
+                        <p><span>列表选择字段</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (组合) -->
+                    <div id="u9657" class="ax_default" data-left="24" data-top="12" data-width="20" data-height="20" layer-opacity="1">
+
+                      <!-- Unnamed (形状) -->
+                      <div id="u9658" class="ax_default _形状">
+                        <img id="u9658_img" class="img " src="images/表输入（离线）/u5343.svg"/>
+                        <div id="u9658_text" class="text " style="display:none; visibility: hidden">
+                          <p></p>
+                        </div>
+                      </div>
+
+                      <!-- Unnamed (形状) -->
+                      <div id="u9659" class="ax_default _形状">
+                        <img id="u9659_img" class="img " src="images/表输入（离线）/u5344.svg"/>
+                        <div id="u9659_text" class="text " style="display:none; visibility: hidden">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (线段) -->
+                  <div id="u9660" class="ax_default line1">
+                    <img id="u9660_img" class="img " src="images/表输入（离线）/u5345.svg"/>
+                    <div id="u9660_text" class="text " style="display:none; visibility: hidden">
+                      <p></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u9661" class="ax_default box_32">
+                    <div id="u9661_div" class=""></div>
+                    <div id="u9661_text" class="text " style="display:none; visibility: hidden">
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 字段列表 (动态面板) -->
+            <div id="u9662" class="ax_default" data-label="字段列表">
+              <div id="u9662_state0" class="panel_state" data-label="State1" style="">
+                <div id="u9662_state0_content" class="panel_state_content">
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u9663" class="ax_default box_11">
+                    <div id="u9663_div" class=""></div>
+                    <div id="u9663_text" class="text " style="display:none; visibility: hidden">
+                      <p></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (表格) -->
+                  <div id="u9664" class="ax_default">
+
+                    <!-- Unnamed (单元格) -->
+                    <div id="u9665" class="ax_default table_cell">
+                      <img id="u9665_img" class="img " src="images/表输入（离线）/u5350.png"/>
+                      <div id="u9665_text" class="text " style="display:none; visibility: hidden">
+                        <p></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (单元格) -->
+                    <div id="u9666" class="ax_default table_cell">
+                      <img id="u9666_img" class="img " src="images/表输入（离线）/u5351.png"/>
+                      <div id="u9666_text" class="text ">
+                        <p><span>名称</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (单元格) -->
+                    <div id="u9667" class="ax_default table_cell">
+                      <img id="u9667_img" class="img " src="images/表输入（离线）/u5352.png"/>
+                      <div id="u9667_text" class="text ">
+                        <p><span>类型</span></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (组合) -->
+                  <div id="u9668" class="ax_default" data-left="517" data-top="0" data-width="246" data-height="28" layer-opacity="1">
+
+                    <!-- Unnamed (矩形) -->
+                    <div id="u9669" class="ax_default shape1">
+                      <div id="u9669_div" class=""></div>
+                      <div id="u9669_text" class="text ">
+                        <p><span>请输入名称进行匹配</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (组合) -->
+                    <div id="u9670" class="ax_default" data-left="743" data-top="9" data-width="11.6213203435597" data-height="12.6213203435597" layer-opacity="1">
+
+                      <!-- Unnamed (矩形) -->
+                      <div id="u9671" class="ax_default shape1">
+                        <div id="u9671_div" class=""></div>
+                        <div id="u9671_text" class="text " style="display:none; visibility: hidden">
+                          <p></p>
+                        </div>
+                      </div>
+
+                      <!-- Unnamed (线段) -->
+                      <div id="u9672" class="ax_default line1">
+                        <img id="u9672_img" class="img " src="images/新增转换任务（第二步）/u4618.svg"/>
+                        <div id="u9672_text" class="text " style="display:none; visibility: hidden">
+                          <p></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u9673" class="ax_default label">
+                    <div id="u9673_div" class=""></div>
+                    <div id="u9673_text" class="text ">
+                      <p><span>已选择</span><span style="color:#409EFF;"> 38/50</span><span> 条</span></p>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (复选框) -->
+                  <div id="u9674" class="ax_default checkbox">
+                    <label id="u9674_input_label" for="u9674_input" style="position: absolute; left: 0px;">
+                      <img id="u9674_img" class="img " src="images/表输入（离线）/u5359.svg"/>
+                      <div id="u9674_text" class="text " style="display:none; visibility: hidden">
+                        <p></p>
+                      </div>
+                    </label>
+                    <input id="u9674_input" type="checkbox" value="checkbox"/>
+                  </div>
+
+                  <!-- Unnamed (动态面板) -->
+                  <div id="u9675" class="ax_default">
+                    <div id="u9675_state0" class="panel_state" data-label="State1" style="">
+                      <div id="u9675_state0_content" class="panel_state_content">
+
+                        <!-- Unnamed (表格) -->
+                        <div id="u9676" class="ax_default">
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9677" class="ax_default table_cell">
+                            <img id="u9677_img" class="img " src="images/表输入（离线）/u5362.png"/>
+                            <div id="u9677_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9678" class="ax_default table_cell">
+                            <img id="u9678_img" class="img " src="images/表输入（离线）/u5363.png"/>
+                            <div id="u9678_text" class="text ">
+                              <p><span>Column 1</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9679" class="ax_default table_cell">
+                            <img id="u9679_img" class="img " src="images/表输入（离线）/u5364.png"/>
+                            <div id="u9679_text" class="text ">
+                              <p><span>String</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9680" class="ax_default table_cell">
+                            <img id="u9680_img" class="img " src="images/表输入（离线）/u5365.png"/>
+                            <div id="u9680_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9681" class="ax_default table_cell">
+                            <img id="u9681_img" class="img " src="images/表输入（离线）/u5366.png"/>
+                            <div id="u9681_text" class="text ">
+                              <p><span>Column 2</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9682" class="ax_default table_cell">
+                            <img id="u9682_img" class="img " src="images/表输入（离线）/u5367.png"/>
+                            <div id="u9682_text" class="text ">
+                              <p><span>Integer</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9683" class="ax_default table_cell">
+                            <img id="u9683_img" class="img " src="images/表输入（离线）/u5368.png"/>
+                            <div id="u9683_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9684" class="ax_default table_cell">
+                            <img id="u9684_img" class="img " src="images/表输入（离线）/u5369.png"/>
+                            <div id="u9684_text" class="text ">
+                              <p><span>Column 3</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9685" class="ax_default table_cell">
+                            <img id="u9685_img" class="img " src="images/表输入（离线）/u5370.png"/>
+                            <div id="u9685_text" class="text ">
+                              <p><span>Long</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9686" class="ax_default table_cell">
+                            <img id="u9686_img" class="img " src="images/表输入（离线）/u5371.png"/>
+                            <div id="u9686_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9687" class="ax_default table_cell">
+                            <img id="u9687_img" class="img " src="images/表输入（离线）/u5372.png"/>
+                            <div id="u9687_text" class="text ">
+                              <p><span>Column 4</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9688" class="ax_default table_cell">
+                            <img id="u9688_img" class="img " src="images/表输入（离线）/u5373.png"/>
+                            <div id="u9688_text" class="text ">
+                              <p><span>Short</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9689" class="ax_default table_cell">
+                            <img id="u9689_img" class="img " src="images/表输入（离线）/u5368.png"/>
+                            <div id="u9689_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9690" class="ax_default table_cell">
+                            <img id="u9690_img" class="img " src="images/表输入（离线）/u5369.png"/>
+                            <div id="u9690_text" class="text ">
+                              <p><span>Column 5</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9691" class="ax_default table_cell">
+                            <img id="u9691_img" class="img " src="images/表输入（离线）/u5370.png"/>
+                            <div id="u9691_text" class="text ">
+                              <p><span>Float</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9692" class="ax_default table_cell">
+                            <img id="u9692_img" class="img " src="images/表输入（离线）/u5371.png"/>
+                            <div id="u9692_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9693" class="ax_default table_cell">
+                            <img id="u9693_img" class="img " src="images/表输入（离线）/u5372.png"/>
+                            <div id="u9693_text" class="text ">
+                              <p><span>Column 6</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9694" class="ax_default table_cell">
+                            <img id="u9694_img" class="img " src="images/表输入（离线）/u5373.png"/>
+                            <div id="u9694_text" class="text ">
+                              <p><span>Double</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9695" class="ax_default table_cell">
+                            <img id="u9695_img" class="img " src="images/表输入（离线）/u5368.png"/>
+                            <div id="u9695_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9696" class="ax_default table_cell">
+                            <img id="u9696_img" class="img " src="images/表输入（离线）/u5369.png"/>
+                            <div id="u9696_text" class="text ">
+                              <p><span>Column 7</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9697" class="ax_default table_cell">
+                            <img id="u9697_img" class="img " src="images/表输入（离线）/u5370.png"/>
+                            <div id="u9697_text" class="text ">
+                              <p><span>Boolean</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9698" class="ax_default table_cell">
+                            <img id="u9698_img" class="img " src="images/表输入（离线）/u5371.png"/>
+                            <div id="u9698_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9699" class="ax_default table_cell">
+                            <img id="u9699_img" class="img " src="images/表输入（离线）/u5372.png"/>
+                            <div id="u9699_text" class="text ">
+                              <p><span>Column 8</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9700" class="ax_default table_cell">
+                            <img id="u9700_img" class="img " src="images/表输入（离线）/u5373.png"/>
+                            <div id="u9700_text" class="text ">
+                              <p><span>Date</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9701" class="ax_default table_cell">
+                            <img id="u9701_img" class="img " src="images/表输入（离线）/u5368.png"/>
+                            <div id="u9701_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9702" class="ax_default table_cell">
+                            <img id="u9702_img" class="img " src="images/表输入（离线）/u5369.png"/>
+                            <div id="u9702_text" class="text ">
+                              <p><span>Column 9</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9703" class="ax_default table_cell">
+                            <img id="u9703_img" class="img " src="images/表输入（离线）/u5370.png"/>
+                            <div id="u9703_text" class="text ">
+                              <p><span>Byte</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9704" class="ax_default table_cell">
+                            <img id="u9704_img" class="img " src="images/表输入（离线）/u5371.png"/>
+                            <div id="u9704_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9705" class="ax_default table_cell">
+                            <img id="u9705_img" class="img " src="images/表输入（离线）/u5372.png"/>
+                            <div id="u9705_text" class="text ">
+                              <p><span>Column 10</span></p>
+                            </div>
+                          </div>
+
+                          <!-- Unnamed (单元格) -->
+                          <div id="u9706" class="ax_default table_cell">
+                            <img id="u9706_img" class="img " src="images/表输入（离线）/u5373.png"/>
+                            <div id="u9706_text" class="text ">
+                              <p><span>BigDecimal</span></p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9707" class="ax_default checkbox selected">
+                          <label id="u9707_input_label" for="u9707_input" style="position: absolute; left: 0px;">
+                            <img id="u9707_img" class="img " src="images/表输入（离线）/u5392_selected.svg"/>
+                            <div id="u9707_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9707_input" type="checkbox" value="checkbox" checked/>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9708" class="ax_default checkbox selected">
+                          <label id="u9708_input_label" for="u9708_input" style="position: absolute; left: 0px;">
+                            <img id="u9708_img" class="img " src="images/表输入（离线）/u5393_selected.svg"/>
+                            <div id="u9708_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9708_input" type="checkbox" value="checkbox" checked/>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9709" class="ax_default checkbox selected">
+                          <label id="u9709_input_label" for="u9709_input" style="position: absolute; left: 0px;">
+                            <img id="u9709_img" class="img " src="images/表输入（离线）/u5394_selected.svg"/>
+                            <div id="u9709_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9709_input" type="checkbox" value="checkbox" checked/>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9710" class="ax_default checkbox selected">
+                          <label id="u9710_input_label" for="u9710_input" style="position: absolute; left: 0px;">
+                            <img id="u9710_img" class="img " src="images/表输入（离线）/u5395_selected.svg"/>
+                            <div id="u9710_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9710_input" type="checkbox" value="checkbox" checked/>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9711" class="ax_default checkbox selected">
+                          <label id="u9711_input_label" for="u9711_input" style="position: absolute; left: 0px;">
+                            <img id="u9711_img" class="img " src="images/表输入（离线）/u5396_selected.svg"/>
+                            <div id="u9711_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9711_input" type="checkbox" value="checkbox" checked/>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9712" class="ax_default checkbox">
+                          <label id="u9712_input_label" for="u9712_input" style="position: absolute; left: 0px;">
+                            <img id="u9712_img" class="img " src="images/表输入（离线）/u5397.svg"/>
+                            <div id="u9712_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9712_input" type="checkbox" value="checkbox"/>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9713" class="ax_default checkbox">
+                          <label id="u9713_input_label" for="u9713_input" style="position: absolute; left: 0px;">
+                            <img id="u9713_img" class="img " src="images/表输入（离线）/u5398.svg"/>
+                            <div id="u9713_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9713_input" type="checkbox" value="checkbox"/>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9714" class="ax_default checkbox">
+                          <label id="u9714_input_label" for="u9714_input" style="position: absolute; left: 0px;">
+                            <img id="u9714_img" class="img " src="images/表输入（离线）/u5399.svg"/>
+                            <div id="u9714_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9714_input" type="checkbox" value="checkbox"/>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9715" class="ax_default checkbox">
+                          <label id="u9715_input_label" for="u9715_input" style="position: absolute; left: 0px;">
+                            <img id="u9715_img" class="img " src="images/表输入（离线）/u5400.svg"/>
+                            <div id="u9715_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9715_input" type="checkbox" value="checkbox"/>
+                        </div>
+
+                        <!-- Unnamed (复选框) -->
+                        <div id="u9716" class="ax_default checkbox">
+                          <label id="u9716_input_label" for="u9716_input" style="position: absolute; left: 0px;">
+                            <img id="u9716_img" class="img " src="images/表输入（离线）/u5401.svg"/>
+                            <div id="u9716_text" class="text " style="display:none; visibility: hidden">
+                              <p></p>
+                            </div>
+                          </label>
+                          <input id="u9716_input" type="checkbox" value="checkbox"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Unnamed (矩形) -->
+                  <div id="u9717" class="ax_default label">
+                    <div id="u9717_div" class=""></div>
+                    <div id="u9717_text" class="text ">
+                      <p><span>清空</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="u9662_state1" class="panel_state" data-label="State2" style="visibility: hidden;">
+                <div id="u9662_state1_content" class="panel_state_content">
+
+                  <!-- Unnamed (文本域) -->
+                  <div id="u9718" class="ax_default text_area">
+                    <img id="u9718_img" class="img " src="images/hbase输入（离线）/u7137.svg"/>
+                    <textarea id="u9718_input" class="u9718_input"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u9719" class="ax_default _文本段落">
+        <div id="u9719_div" class=""></div>
+        <div id="u9719_text" class="text ">
+          <p><span style="font-family:'ArialMT', 'Arial', sans-serif;font-weight:400;">参数详细描述如下：</span></p><p><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;font-weight:700;">&nbsp;&nbsp; ●&nbsp; 源数据源：</span><span style="font-family:'ArialMT', 'Arial', sans-serif;font-weight:400;">选择数据源(从数据源管理模块创建的数据源中选择)。</span></p><p><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;font-weight:700;">&nbsp;&nbsp; ●&nbsp; 源数据库：</span><span style="font-family:'ArialMT', 'Arial', sans-serif;font-weight:400;">选择数据源下的数据库。</span></p><p><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;font-weight:700;">&nbsp;&nbsp; ●&nbsp; 源表：</span><span style="font-family:'ArialMT', 'Arial', sans-serif;font-weight:400;">从源数据库中选择对应的数据表。</span></p><p><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial', sans-serif;font-weight:700;">&nbsp;&nbsp; ●&nbsp; 读取数据模式：</span></p><p><span style="font-family:'ArialMT', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp;&nbsp; 🔹增量读取：不处理历史数据，只处理增量变更数据</span></p><p><span style="font-family:'ArialMT', 'Arial', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp;&nbsp; 🔹全量读取：进行全量读取，然后再捕获增量变更</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u9720" class="ax_default _文本段落">
+        <div id="u9720_div" class=""></div>
+        <div id="u9720_text" class="text ">
+          <p><span>插件说明</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

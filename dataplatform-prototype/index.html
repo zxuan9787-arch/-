@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据中台原型（元数据 / 数据分层 / 资产广场 / 标准评审）</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand__logo">DP</div>
+          <div class="brand__text">
+            <div class="brand__name">数据中台原型</div>
+            <div class="brand__sub">可交互 · CRUD · 本地存储</div>
+          </div>
+        </div>
+
+        <nav class="nav" id="nav">
+          <a class="nav__item" href="#/spaces" data-route="/spaces">
+            <span class="nav__dot"></span><span>数据分层</span>
+          </a>
+          <a class="nav__item" href="#/metadata" data-route="/metadata">
+            <span class="nav__dot"></span><span>元数据管理</span>
+          </a>
+          <a class="nav__item" href="#/plaza" data-route="/plaza">
+            <span class="nav__dot"></span><span>数据资产广场</span>
+          </a>
+          <a class="nav__item" href="#/standards" data-route="/standards">
+            <span class="nav__dot"></span><span>数据标准评审</span>
+          </a>
+        </nav>
+
+        <div class="sidebar__footer">
+          <div class="muted">提示：所有数据保存在浏览器 localStorage</div>
+          <button class="btn btn--ghost w100" id="btnResetDemo">重置演示数据</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar__left">
+            <div class="title" id="pageTitle">—</div>
+            <div class="crumb" id="pageCrumb"></div>
+          </div>
+
+          <div class="topbar__right">
+            <div class="select">
+              <label class="select__label">当前分层</label>
+              <select id="spaceSelect"></select>
+            </div>
+            <div class="select">
+              <label class="select__label">当前用户</label>
+              <select id="userSelect"></select>
+            </div>
+          </div>
+        </header>
+
+        <section class="content">
+          <div id="toastHost" class="toastHost" aria-live="polite"></div>
+          <div id="view"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modalHost" id="modalHost" aria-hidden="true"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
